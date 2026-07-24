@@ -1,13 +1,3 @@
-/*==========================================
- WEBSITE PROFIL DESA
- File : script.js
-==========================================*/
-
-
-/*==========================================
-MENU MOBILE
-==========================================*/
-
 const menuButton = document.getElementById("menu-button");
 const menu = document.querySelector(".menu");
 
@@ -22,10 +12,6 @@ if(menuButton){
 }
 
 
-/*==========================================
-NAVBAR AKTIF
-==========================================*/
-
 const currentPage = window.location.pathname.split("/").pop();
 
 const menuLink = document.querySelectorAll(".menu a");
@@ -39,11 +25,6 @@ menuLink.forEach(link=>{
     }
 
 });
-
-
-/*==========================================
-BACK TO TOP
-==========================================*/
 
 const backButton = document.createElement("button");
 
@@ -105,9 +86,6 @@ backButton.addEventListener("click",function(){
 
 });
 
-/*==========================================
-VALIDASI FORM KONTAK
-==========================================*/
 
 const form = document.getElementById("contactForm");
 
@@ -155,11 +133,6 @@ if(form){
 
 }
 
-
-/*==========================================
-PENGHITUNG KARAKTER PESAN
-==========================================*/
-
 const textarea = document.getElementById("pesan");
 
 if(textarea){
@@ -188,10 +161,6 @@ if(textarea){
 
 }
 
-
-/*==========================================
-SHOW / HIDE INFORMASI
-==========================================*/
 
 const informasi = document.querySelector(".informasi");
 
@@ -247,7 +216,6 @@ darkModeButton.title = "Dark Mode";
 
 document.body.appendChild(darkModeButton);
 
-// Posisi tombol (kanan atas)
 darkModeButton.style.position = "fixed";
 darkModeButton.style.top = "90px";
 darkModeButton.style.right = "20px";
@@ -262,7 +230,6 @@ darkModeButton.style.cursor = "pointer";
 darkModeButton.style.boxShadow = "0 4px 10px rgba(0,0,0,.3)";
 darkModeButton.style.zIndex = "9999";
 
-// Jika sebelumnya pengguna pernah memilih Dark Mode
 if(localStorage.getItem("theme") === "dark"){
 
     document.body.classList.add("dark");
@@ -270,7 +237,6 @@ if(localStorage.getItem("theme") === "dark"){
 
 }
 
-// Event klik tombol
 darkModeButton.addEventListener("click", function(){
 
     document.body.classList.toggle("dark");
@@ -316,10 +282,6 @@ window.addEventListener("scroll", function(){
 });
 
 
-/*==========================================
-ANIMASI MUNCUL SAAT SCROLL
-==========================================*/
-
 const cards = document.querySelectorAll(".card,.gallery-card,.berita-card");
 
 function tampilScroll(){
@@ -356,10 +318,6 @@ window.addEventListener("scroll", tampilScroll);
 
 tampilScroll();
 
-
-/*==========================================
-POPUP GALERI
-==========================================*/
 
 const gambar = document.querySelectorAll(".gallery-card img");
 
@@ -405,11 +363,6 @@ gambar.forEach(function(img){
     });
 
 });
-
-
-/*==========================================
-TAHUN FOOTER OTOMATIS
-==========================================*/
 
 const footer = document.querySelector("footer");
 
