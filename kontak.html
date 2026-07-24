@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kontak Desa Harmoni</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <img src="images/logo.png" alt="Logo Desa">
+
+                <h1>Desa Harmoni</h1>
+
+            </div>
+
+            <ul class="menu">
+
+                <li><a href="index.html">Beranda</a></li>
+
+                <li><a href="profil.html">Profil</a></li>
+
+                <li><a href="layanan.html">Layanan</a></li>
+
+                <li><a href="galeri.html">Galeri</a></li>
+
+                <li><a href="kontak.html" class="active">Kontak</a></li>
+
+            </ul>
+
+            <button id="menu-button">☰</button>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <!-- ================= JUDUL ================= -->
+
+        <section class="page-header">
+
+            <h2>Hubungi Kami</h2>
+
+            <p>
+
+                Silakan menghubungi Pemerintah Desa Harmoni apabila
+                membutuhkan informasi atau pelayanan.
+
+            </p>
+
+        </section>
+
+        <!-- ================= INFORMASI ================= -->
+
+        <section class="kontak-info">
+
+            <article>
+
+                <h2>Informasi Kontak</h2>
+
+                <p><strong>Alamat :</strong> Jl. Raya Desa Harmoni No.1</p>
+
+                <p><strong>Kecamatan :</strong> Sejahtera</p>
+
+                <p><strong>Kabupaten :</strong> Makmur</p>
+
+                <p><strong>Provinsi :</strong> Sulawesi Selatan</p>
+
+                <p><strong>Email :</strong> desaharmoni@email.com</p>
+
+                <p><strong>Telepon :</strong> (0411) 123456</p>
+
+                <p><strong>Jam Pelayanan :</strong> Senin - Jumat (08.00 - 15.00)</p>
+
+            </article>
+
+        </section>
+
+        <!-- ================= FORM ================= -->
+
+        <section class="form-section">
+
+            <h2>Formulir Kontak</h2>
+
+            <form id="contactForm">
+
+                <!-- Nama -->
+
+                <label for="nama">Nama Lengkap</label>
+
+                <input
+                    type="text"
+                    id="nama"
+                    name="nama"
+                    placeholder="Masukkan nama lengkap"
+                    required
+                    minlength="3"
+                    maxlength="50">
+
+                <!-- Email -->
+
+                <label for="email">Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="contoh@email.com"
+                    required>
+
+                <!-- Nomor HP -->
+
+                <label for="telepon">Nomor Telepon</label>
+
+                <input
+                    type="tel"
+                    id="telepon"
+                    name="telepon"
+                    placeholder="08xxxxxxxxxx"
+                    pattern="[0-9]{10,13}"
+                    required>
+
+                <!-- Tanggal -->
+
+                <label for="tanggal">Tanggal Pengajuan</label>
+
+                <input
+                    type="date"
+                    id="tanggal"
+                    name="tanggal"
+                    required>
+
+                <!-- Jenis Layanan -->
+
+                <label for="layanan">Pilih Layanan</label>
+
+                <select id="layanan" required>
+
+                    <option value="">-- Pilih Layanan --</option>
+
+                    <option>Surat Domisili</option>
+
+                    <option>Surat Keterangan Usaha</option>
+
+                    <option>Surat Kelahiran</option>
+
+                    <option>Surat Kematian</option>
+
+                    <option>Lainnya</option>
+
+                </select>
+
+                <!-- Pesan -->
+
+                <label for="pesan">Pesan</label>
+
+                <textarea
+                    id="pesan"
+                    name="pesan"
+                    rows="6"
+                    placeholder="Tuliskan pesan Anda..."
+                    required
+                    minlength="10"
+                    maxlength="300"></textarea>
+
+                <button type="submit">
+
+                    Kirim Pesan
+
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- ================= ASIDE ================= -->
+
+        <aside class="informasi">
+
+            <h2>Catatan</h2>
+
+            <ul>
+
+                <li>Pastikan data yang diisi benar.</li>
+
+                <li>Balasan akan dikirim melalui email.</li>
+
+                <li>Jam pelayanan Senin–Jumat.</li>
+
+            </ul>
+
+        </aside>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>© 2026 Pemerintah Desa Harmoni</p>
+
+        <p>Jl. Raya Desa Harmoni No.1</p>
+
+        <p>Email : desaharmoni@email.com</p>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

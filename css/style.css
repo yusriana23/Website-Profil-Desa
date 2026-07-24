@@ -1,0 +1,1471 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#f4f7f6;
+
+    color:#333;
+
+    line-height:1.7;
+
+}
+
+:root{
+
+    --primary:#2E7D32;
+    --secondary:#43A047;
+    --dark:#1B5E20;
+
+    --bg:#f4f7f6;
+    --card:#ffffff;
+    --text:#333333;
+
+}
+
+h1{
+
+    font-size:32px;
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+}
+
+h2{
+
+    font-size:30px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+    text-align:center;
+
+}
+
+h3{
+
+    font-size:22px;
+
+    color:var(--dark);
+
+    margin-bottom:10px;
+
+}
+
+p{
+
+    margin-bottom:15px;
+
+    color:inherit;
+
+}
+
+
+ul{
+
+    padding-left:25px;
+
+}
+
+li{
+
+    margin-bottom:10px;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+header{
+
+    width:100%;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    background:var(--white);
+
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+
+}
+
+.navbar{
+
+    width:90%;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 0;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.logo img{
+
+    width:55px;
+
+}
+
+.logo h1{
+
+    font-size:26px;
+
+    margin:0;
+
+}
+
+.menu{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:30px;
+
+}
+
+.menu li{
+
+    list-style:none;
+
+}
+
+.menu a{
+
+    font-weight:500;
+
+    color:inherit;
+
+    transition:.3s;
+
+}
+
+.menu a:hover{
+
+    color:var(--primary);
+
+}
+
+.menu a.active{
+
+    color:var(--primary);
+
+    font-weight:700;
+
+}
+
+#menu-button{
+
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+}
+
+
+main{
+
+    width:90%;
+
+    margin:40px auto;
+
+}
+
+/* ===============================
+   HERO
+==================================*/
+
+.hero{
+
+    height:90vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+    border-radius:15px;
+
+    background:
+
+    linear-gradient(rgba(0,0,0,.5),
+
+    rgba(0,0,0,.5)),
+
+    url("../images/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    margin-bottom:70px;
+
+}
+
+.hero-text{
+
+    width:70%;
+
+}
+
+.hero-text h2{
+
+    color:white;
+
+    font-size:48px;
+
+    margin-bottom:25px;
+
+}
+
+.hero-text p{
+
+    color:white;
+
+    font-size:18px;
+
+    margin-bottom:30px;
+
+}
+
+/* ===============================
+   BUTTON
+==================================*/
+
+.btn{
+
+    display:inline-block;
+
+    padding:15px 35px;
+
+    background:var(--primary);
+
+    color:white;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    background:var(--dark);
+
+    transform:translateY(-3px);
+
+}
+
+/* ===============================
+   PAGE HEADER
+==================================*/
+
+.page-header{
+
+    text-align:center;
+
+    padding:60px 20px;
+
+}
+
+.page-header p{
+
+    width:70%;
+
+    margin:auto;
+
+}
+
+/* ===============================
+   SECTION
+==================================*/
+
+section{
+
+    margin-bottom:80px;
+
+}
+
+/* ===============================
+   ABOUT
+==================================*/
+
+.tentang-singkat{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:40px;
+
+}
+
+.tentang-singkat article{
+
+    flex:1;
+
+}
+
+.tentang-singkat aside{
+
+    flex:1;
+
+}
+
+.tentang-singkat img{
+
+    border-radius:15px;
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ===============================
+   CONTAINER
+==================================*/
+
+.container{
+
+    width:90%;
+
+    margin:auto;
+
+}
+
+/* ===============================
+   CARD CONTAINER
+==================================*/
+
+.card-container{
+
+    display:flex;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+/* ===============================
+   CARD
+==================================*/
+
+.card{
+
+    flex:1;
+
+    min-width:240px;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:12px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.card p{
+
+    margin-top:10px;
+
+}
+
+/* ===============================
+   STATISTIK
+==================================*/
+
+.statistik{
+
+    text-align:center;
+
+}
+
+.statistik .card h3{
+
+    font-size:40px;
+
+    color:var(--primary);
+
+}
+
+/* ===============================
+   POTENSI
+==================================*/
+
+.potensi li{
+
+    background:var(--card);
+
+    color:var(--text);
+
+    padding:20px;
+
+    border-left:5px solid var(--primary);
+
+    box-shadow:var(--shadow);
+
+    border-radius:10px;
+
+}
+
+/* ===============================
+   PROFIL DESA
+==================================*/
+
+.profil{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.profil article{
+
+    width:100%;
+
+    background:var(--white);
+
+    padding:35px;
+
+    border-radius:12px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.profil img{
+
+    width:100%;
+
+    height:400px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+    margin:25px 0;
+
+}
+
+/* ===============================
+   VISI MISI
+==================================*/
+
+.visi-misi{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+.visi-misi article{
+
+    background:var(--white);
+
+    padding:30px;
+
+    border-radius:12px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.visi-misi article:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* ===============================
+   DATA DESA
+==================================*/
+
+.data-desa{
+
+    overflow-x:auto;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:25px;
+
+    background:white;
+
+    box-shadow:var(--shadow);
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+}
+
+thead{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+th{
+
+    padding:18px;
+
+    text-align:left;
+
+}
+
+td{
+
+    padding:16px;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+tbody tr:nth-child(even){
+
+    background:#f9f9f9;
+
+}
+
+tbody tr:hover{
+
+    background:#E8F5E9;
+
+}
+
+/* ===============================
+   ORGANISASI
+==================================*/
+
+.organisasi article{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:12px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.organisasi img{
+
+    width:100%;
+
+    height:350px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+    margin-bottom:25px;
+
+}
+
+.organisasi ol{
+
+    margin-left:25px;
+
+}
+
+/* ===============================
+   GEOGRAFIS
+==================================*/
+
+.geografis{
+
+    background:var(--light);
+
+    padding:30px;
+
+    border-left:6px solid var(--primary);
+
+    border-radius:10px;
+
+}
+
+/* ===============================
+   LAYANAN
+==================================*/
+
+.layanan .card-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+.layanan .card{
+
+    text-align:center;
+
+}
+
+.layanan .card h3{
+
+    color:var(--primary);
+
+}
+
+/* ===============================
+   PERSYARATAN
+==================================*/
+
+.persyaratan article{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:12px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.persyaratan ul{
+
+    margin-top:20px;
+
+}
+
+/* ===============================
+   PROGRAM DESA
+==================================*/
+
+.program .card-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.program .card{
+
+    text-align:center;
+
+}
+
+.program .card:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.program .card:hover h3{
+
+    color:white;
+
+}
+
+.program .card:hover p{
+
+    color:white;
+
+}
+
+/* ===============================
+   INFORMASI
+==================================*/
+
+.informasi{
+
+    margin-top:60px;
+
+    background:#FFF8E1;
+
+    padding:30px;
+
+    border-left:6px solid #FFC107;
+
+    border-radius:10px;
+
+}
+
+/* ===============================
+   GALERI FOTO
+==================================*/
+
+.gallery-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+.gallery-card{
+
+    background:white;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.gallery-card:hover{
+
+    transform:scale(1.03);
+
+}
+
+.gallery-card img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+}
+
+.gallery-card h3{
+
+    padding:20px;
+
+    text-align:center;
+
+}
+
+/* ===============================
+   BERITA
+==================================*/
+
+.berita-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.berita-card{
+
+    background:white;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.berita-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.berita-card img{
+
+    width:100%;
+
+    height:230px;
+
+    object-fit:cover;
+
+}
+
+.berita-card h3{
+
+    padding:20px 20px 10px;
+
+}
+
+.berita-card p{
+
+    padding:0 20px;
+
+}
+
+.berita-card a{
+
+    display:inline-block;
+
+    margin:20px;
+
+    padding:10px 20px;
+
+    background:var(--primary);
+
+    color:white;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+
+.berita-card a:hover{
+
+    background:var(--dark);
+
+}
+
+/* ===============================
+   AGENDA
+==================================*/
+
+.agenda table{
+
+    margin-top:30px;
+
+}
+
+.agenda tbody tr:hover{
+
+    background:#C8E6C9;
+
+}
+
+/* ===============================
+   GAMBAR
+==================================*/
+
+img{
+
+    border-radius:10px;
+
+}
+
+/* ===============================
+   TRANSITION
+==================================*/
+
+.card,
+.gallery-card,
+.berita-card,
+.btn,
+.menu a{
+
+    transition:all .3s ease;
+
+}
+
+/* ===============================
+   SHADOW HOVER
+==================================*/
+
+.card:hover,
+.gallery-card:hover,
+.berita-card:hover{
+
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+}
+
+/* =======================================================
+   BAGIAN 3
+   FORM • FOOTER • RESPONSIVE
+=======================================================*/
+
+/* ===============================
+   KONTAK
+==================================*/
+
+.kontak-info{
+
+    margin-bottom:50px;
+
+}
+
+.kontak-info article{
+
+    background:var(--white);
+
+    padding:35px;
+
+    border-radius:12px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.form-section{
+
+    margin-top:40px;
+
+}
+
+.form-section h2{
+
+    margin-bottom:30px;
+
+}
+
+form{
+
+    background:var(--white);
+
+    padding:40px;
+
+    border-radius:12px;
+
+    box-shadow:var(--shadow);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+/* ===============================
+   LABEL
+==================================*/
+
+label{
+
+    font-weight:600;
+
+    color:var(--dark);
+
+}
+
+/* ===============================
+   INPUT
+==================================*/
+
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:14px 16px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    font-family:'Poppins',sans-serif;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 8px rgba(46,125,50,.2);
+
+}
+
+/* ===============================
+   TEXTAREA
+==================================*/
+
+textarea{
+
+    resize:vertical;
+
+}
+
+/* ===============================
+   BUTTON FORM
+==================================*/
+
+button{
+
+    background:var(--primary);
+
+    color:white;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:var(--dark);
+
+}
+
+/* ===============================
+   FOOTER
+==================================*/
+
+footer{
+
+    background:var(--primary);
+
+    color:white;
+
+    text-align:center;
+
+    padding:35px 20px;
+
+    margin-top:80px;
+
+}
+
+footer p{
+
+    color:white;
+
+    margin-bottom:8px;
+
+}
+
+/* ===============================
+   RESPONSIVE IMAGE
+==================================*/
+
+img{
+
+    max-width:100%;
+
+    height:auto;
+
+}
+
+/* ===============================
+   TABLET
+==================================*/
+
+@media (max-width:992px){
+
+    .hero-text{
+
+        width:90%;
+
+    }
+
+    .hero-text h2{
+
+        font-size:38px;
+
+    }
+
+    .tentang-singkat{
+
+        flex-direction:column;
+
+    }
+
+    .visi-misi{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .layanan .card-container{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .program .card-container{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .gallery-container{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .berita-container{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/* ===============================
+   SMARTPHONE
+==================================*/
+
+@media (max-width:768px){
+
+    .navbar{
+
+        flex-wrap:wrap;
+
+    }
+
+    #menu-button{
+
+        display:block;
+
+    }
+
+    .menu{
+
+        display:none;
+
+        flex-direction:column;
+
+        width:100%;
+
+        margin-top:20px;
+
+        background:white;
+
+        padding:15px;
+
+        border-top:1px solid #ddd;
+
+    }
+
+    .menu.active{
+
+        display:flex;
+
+    }
+
+    .menu li{
+
+        text-align:center;
+
+        padding:10px 0;
+
+    }
+
+    main{
+
+        width:95%;
+
+    }
+
+    .hero{
+
+        height:70vh;
+
+        padding:20px;
+
+    }
+
+    .hero-text h2{
+
+        font-size:30px;
+
+    }
+
+    .hero-text p{
+
+        font-size:16px;
+
+    }
+
+    .card-container{
+
+        flex-direction:column;
+
+    }
+
+    .layanan .card-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .program .card-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .gallery-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .berita-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    table{
+
+        font-size:14px;
+
+    }
+
+    th,
+    td{
+
+        padding:10px;
+
+    }
+
+    form{
+
+        padding:25px;
+
+    }
+
+}
+
+/* ===============================
+   SMARTPHONE KECIL
+==================================*/
+
+@media (max-width:480px){
+
+    h1{
+
+        font-size:24px;
+
+    }
+
+    h2{
+
+        font-size:24px;
+
+    }
+
+    h3{
+
+        font-size:20px;
+
+    }
+
+    .hero-text h2{
+
+        font-size:26px;
+
+    }
+
+    .hero{
+
+        height:60vh;
+
+    }
+
+    .btn{
+
+        padding:12px 25px;
+
+    }
+
+}
+
+/* ===============================
+   ANIMASI HOVER
+==================================*/
+
+.card:hover,
+.gallery-card:hover,
+.berita-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* ===============================
+   SCROLLBAR
+==================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#f1f1f1;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--dark);
+
+}
+
+/* ===============================
+   SELEKSI TEKS
+==================================*/
+
+::selection{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+body.dark{
+    background:#1f1f1f;
+    color:#ffffff;
+}
+
+body.dark header,
+body.dark .navbar{
+    background:#2b2b2b;
+}
+
+body.dark .card,
+body.dark article,
+body.dark table,
+body.dark form,
+body.dark .gallery-card,
+body.dark .berita-card,
+body.dark .potensi li{
+    background:#333;
+    color:#ffffff;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3{
+    color:#81C784;
+}
+
+body.dark p,
+body.dark li,
+body.dark td,
+body.dark th,
+body.dark label,
+body.dark a{
+    color:#ffffff;
+}
+
+body.dark input,
+body.dark textarea,
+body.dark select{
+    background:#444;
+    color:#ffffff;
+    border:1px solid #777;
+}
+
+body.dark footer{
+    background:#111;
+}
