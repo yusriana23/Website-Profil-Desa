@@ -21,15 +21,21 @@ body{
 }
 
 :root{
-
     --primary:#2E7D32;
     --secondary:#43A047;
     --dark:#1B5E20;
 
-    --bg:#f4f7f6;
-    --card:#ffffff;
+    --bg:#F5F7FA;
+    --card:#FFFFFF;
     --text:#333333;
 
+    --white:#FFFFFF;
+    --light:#F8F9FA;
+
+    --shadow:0 10px 30px rgba(0,0,0,.12);
+    --shadow-hover:0 18px 40px rgba(0,0,0,.18);
+
+    --radius:16px;
 }
 
 h1{
@@ -102,35 +108,31 @@ img{
 }
 
 header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: transparent;
+    transition: .3s;
+}
 
-    width:100%;
+header.scrolled{
+    background: rgba(27,94,32,.95);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 5px 20px rgba(0,0,0,.15);
+}
 
-    position:sticky;
-
-    top:0;
-
-    z-index:1000;
-
-    background:var(--white);
-
-    box-shadow:0 2px 10px rgba(0,0,0,.1);
-
+header.scrolled .logo h1,
+header.scrolled .menu a{
+    color: white;
 }
 
 .navbar{
-
     width:90%;
-
     margin:auto;
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
-    padding:15px 0;
-
+    padding:18px 0;
 }
 
 .logo{
@@ -175,9 +177,13 @@ header{
 
 .menu a{
 
+    position:relative;
+
     font-weight:500;
 
     color:inherit;
+
+    padding:8px 0;
 
     transition:.3s;
 
@@ -186,6 +192,36 @@ header{
 .menu a:hover{
 
     color:var(--primary);
+
+}
+
+.menu a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-5px;
+
+    width:0;
+
+    height:3px;
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+    transition:.3s;
+
+}
+
+.menu a:hover::after,
+
+.menu a.active::after{
+
+    width:100%;
 
 }
 
@@ -221,84 +257,81 @@ main{
 }
 
 .hero{
-
-    height:90vh;
+    min-height:92vh;
 
     display:flex;
-
-    justify-content:center;
-
     align-items:center;
+    justify-content:center;
 
     text-align:center;
 
-    color:white;
+    border-radius:25px;
 
-    border-radius:15px;
+    overflow:hidden;
 
     background:
-
-    linear-gradient(rgba(0,0,0,.5),
-
-    rgba(0,0,0,.5)),
-
-    url("../images/hero.jpg");
+    linear-gradient(rgba(0,0,0,.25),
+    rgba(0,0,0,.35)),
+    url("../images/Pemandangan Desa.jpg");
 
     background-size:cover;
-
     background-position:center;
 
-    margin-bottom:70px;
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
 
+    margin-bottom:90px;
 }
 
 .hero-text{
 
-    width:70%;
+    width:60%;
 
+    animation:fadeUp 1s ease;
 }
 
 .hero-text h2{
 
-    color:white;
-
-    font-size:48px;
+    font-size:58px;
 
     margin-bottom:25px;
 
+    color:white;
 }
 
 .hero-text p{
 
-    color:white;
+    font-size:20px;
 
-    font-size:18px;
-
-    margin-bottom:30px;
-
+    color:#eee;
 }
 
 .btn{
 
-    display:inline-block;
+display:inline-block;
 
-    padding:15px 35px;
+padding:15px 35px;
 
-    background:var(--primary);
+background:linear-gradient(135deg,#2E7D32,#43A047);
 
-    color:white;
+border-radius:50px;
 
-    border-radius:8px;
+font-weight:600;
 
-    transition:.3s;
+letter-spacing:.5px;
+
+color:white;
+
+transition:.35s;
+
+box-shadow:0 10px 25px rgba(46,125,50,.35);
 
 }
 
 .btn:hover{
 
-    background:var(--dark);
+transform:translateY(-5px);
 
-    transform:translateY(-3px);
+box-shadow:0 20px 35px rgba(46,125,50,.4);
 
 }
 
@@ -322,9 +355,17 @@ main{
 section{
 
     margin-bottom:80px;
+    padding:60px 0;
 
 }
 
+section:nth-child(even){
+
+    background:#fafafa;
+    border-radius:20px;
+    padding:70px 30px;
+
+}
 
 .tentang-singkat{
 
@@ -378,27 +419,48 @@ section{
 
 }
 
+.card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+
+height:5px;
+
+background:linear-gradient(to right,#2E7D32,#81C784);
+
+}
+
 .card{
 
-    flex:1;
+background:white;
 
-    min-width:240px;
+padding:35px;
 
-    background:white;
+border-radius:20px;
 
-    padding:30px;
+box-shadow:var(--shadow);
 
-    border-radius:12px;
+transition:.35s;
 
-    box-shadow:var(--shadow);
+border:1px solid #eef2f5;
 
-    transition:.3s;
+overflow:hidden;
+
+position:relative;
 
 }
 
 .card:hover{
 
-    transform:translateY(-8px);
+transform:translateY(-10px);
+
+box-shadow:var(--shadow-hover);
 
 }
 
@@ -716,21 +778,35 @@ tbody tr:hover{
 
 .gallery-card{
 
-    background:white;
+overflow:hidden;
 
-    border-radius:12px;
+border-radius:18px;
 
-    overflow:hidden;
+background:white;
 
-    box-shadow:var(--shadow);
+box-shadow:var(--shadow);
 
-    transition:.3s;
+transition:.4s;
+
+}
+
+.gallery-card img{
+
+transition:.5s;
+
+}
+
+.gallery-card:hover img{
+
+transform:scale(1.12);
 
 }
 
 .gallery-card:hover{
 
-    transform:scale(1.03);
+transform:translateY(-10px);
+
+box-shadow:var(--shadow-hover);
 
 }
 
@@ -764,21 +840,21 @@ tbody tr:hover{
 
 .berita-card{
 
-    background:white;
+border-radius:18px;
 
-    border-radius:12px;
+box-shadow:var(--shadow);
 
-    overflow:hidden;
+transition:.35s;
 
-    box-shadow:var(--shadow);
-
-    transition:.3s;
+overflow:hidden;
 
 }
 
 .berita-card:hover{
 
-    transform:translateY(-8px);
+transform:translateY(-10px);
+
+box-shadow:var(--shadow-hover);
 
 }
 
@@ -991,23 +1067,21 @@ button:hover{
 
 footer{
 
-    background:var(--primary);
+background:linear-gradient(135deg,#1B5E20,#2E7D32);
 
-    color:white;
+padding:60px 20px;
 
-    text-align:center;
+text-align:center;
 
-    padding:35px 20px;
+color:white;
 
-    margin-top:80px;
+margin-top:100px;
 
 }
 
 footer p{
 
-    color:white;
-
-    margin-bottom:8px;
+opacity:.9;
 
 }
 
@@ -1326,3 +1400,4 @@ body.dark select{
 body.dark footer{
     background:#111;
 }
+

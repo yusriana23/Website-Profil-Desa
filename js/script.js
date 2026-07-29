@@ -256,32 +256,6 @@ darkModeButton.addEventListener("click", function(){
 });
 
 
-
-const navbar = document.querySelector(".navbar");
-
-window.addEventListener("scroll", function(){
-
-    if(window.scrollY > 50){
-
-        navbar.style.background = "#ffffff";
-
-        navbar.style.boxShadow = "0 2px 15px rgba(0,0,0,.2)";
-
-        navbar.style.padding = "10px 0";
-
-    }else{
-
-        navbar.style.background = "transparent";
-
-        navbar.style.boxShadow = "none";
-
-        navbar.style.padding = "15px 0";
-
-    }
-
-});
-
-
 const cards = document.querySelectorAll(".card,.gallery-card,.berita-card");
 
 function tampilScroll(){
@@ -381,3 +355,14 @@ if(footer){
     `;
 
 }
+
+// Efek header saat scroll
+window.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
+
+    if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
