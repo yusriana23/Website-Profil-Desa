@@ -9,15 +9,10 @@ html{
 }
 
 body{
-
     font-family:'Poppins',sans-serif;
-
-    background:#f4f7f6;
-
-    color:#333;
-
+    background:var(--bg);
+    color:var(--text);
     line-height:1.7;
-
 }
 
 :root{
@@ -26,16 +21,14 @@ body{
     --dark:#1B5E20;
 
     --bg:#F5F7FA;
+    --section:#FAFAFA;
     --card:#FFFFFF;
     --text:#333333;
-
-    --white:#FFFFFF;
-    --light:#F8F9FA;
+    --border:#DDDDDD;
+    --table:#F9F9F9;
 
     --shadow:0 10px 30px rgba(0,0,0,.12);
     --shadow-hover:0 18px 40px rgba(0,0,0,.18);
-
-    --radius:16px;
 }
 
 h1{
@@ -360,11 +353,9 @@ section{
 }
 
 section:nth-child(even){
-
-    background:#fafafa;
+    background:var(--section);
     border-radius:20px;
     padding:70px 30px;
-
 }
 
 .tentang-singkat{
@@ -399,14 +390,6 @@ section:nth-child(even){
 
 }
 
-.container{
-
-    width:90%;
-
-    margin:auto;
-
-}
-
 .card-container{
 
     display:flex;
@@ -437,8 +420,7 @@ background:linear-gradient(to right,#2E7D32,#81C784);
 }
 
 .card{
-
-background:white;
+background:var(--card);
 
 padding:35px;
 
@@ -453,6 +435,7 @@ border:1px solid #eef2f5;
 overflow:hidden;
 
 position:relative;
+min-width: 260px;
 
 }
 
@@ -501,24 +484,16 @@ box-shadow:var(--shadow-hover);
 
 }
 
-
-.profil{
-
-    display:flex;
-
-    justify-content:center;
-
-}
-
 .profil article{
 
-    width:100%;
+    max-width:1000px;
+    margin: auto;
 
-    background:var(--white);
+    background:var(--card);
 
-    padding:35px;
+    padding:40px;
 
-    border-radius:12px;
+    border-radius:18px;
 
     box-shadow:var(--shadow);
 
@@ -551,7 +526,7 @@ box-shadow:var(--shadow-hover);
 
 .visi-misi article{
 
-    background:var(--white);
+    background:var(--card);
 
     padding:30px;
 
@@ -570,102 +545,61 @@ box-shadow:var(--shadow-hover);
 }
 
 .data-desa{
-
-    overflow-x:auto;
-
+    max-width:1000px;
+    margin:auto;
 }
 
-table{
-
+.data-desa table{
     width:100%;
-
     border-collapse:collapse;
-
-    margin-top:25px;
-
-    background:white;
-
-    box-shadow:var(--shadow);
-
-    border-radius:10px;
-
     overflow:hidden;
-
-}
-
-thead{
-
-    background:var(--primary);
-
-    color:white;
-
-}
-
-th{
-
-    padding:18px;
-
-    text-align:left;
-
-}
-
-td{
-
-    padding:16px;
-
-    border-bottom:1px solid #ddd;
-
-}
-
-tbody tr:nth-child(even){
-
-    background:#f9f9f9;
-
-}
-
-tbody tr:hover{
-
-    background:#E8F5E9;
-
-}
-
-
-.organisasi article{
-
-    background:white;
-
-    padding:30px;
-
-    border-radius:12px;
-
+    border-radius:15px;
     box-shadow:var(--shadow);
+    background:var(--card);
+}
 
+.data-desa th{
+    background:var(--primary);
+    color:#fff;
+    padding:18px;
+    text-align:left;
+}
+
+.data-desa td{
+    padding:16px 18px;
+    border-bottom:1px solid #e5e5e5;
+}
+
+.data-desa tr:nth-child(even){
+    background:#f8f8f8;
+}
+
+.data-desa tr:hover{
+    background:#e8f5e9;
+}
+
+.organisasi{
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
 }
 
 .organisasi img{
-
     width:100%;
-
-    height:350px;
-
-    object-fit:cover;
-
-    border-radius:10px;
-
-    margin-bottom:25px;
-
+    border-radius:15px;
+    margin:30px 0;
 }
 
 .organisasi ol{
-
-    margin-left:25px;
-
+    text-align:left;
+    width:350px;
+    margin:20px auto;
 }
 
 
 .geografis{
 
-    background:var(--light);
+    background:var(--section);
 
     padding:30px;
 
@@ -699,8 +633,7 @@ tbody tr:hover{
 
 .persyaratan article{
 
-    background:white;
-
+     background:var(--card);
     padding:35px;
 
     border-radius:12px;
@@ -782,7 +715,7 @@ overflow:hidden;
 
 border-radius:18px;
 
-background:white;
+background:var(--card);
 
 box-shadow:var(--shadow);
 
@@ -905,16 +838,48 @@ box-shadow:var(--shadow-hover);
 }
 
 
+.agenda{
+    max-width:900px;
+    margin:0 auto;
+    text-align:center;
+}
+
 .agenda table{
+    width:100%;
+    margin:30px auto 0;
+    border-collapse:collapse;
+    background:var(--card);
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+}
 
-    margin-top:30px;
+.agenda thead{
+    background:var(--primary);
+}
 
+.agenda th,
+.agenda td{
+    width:50%;
+    padding:18px 20px;
+    text-align:center;
+}
+
+.agenda th{
+    color:#fff;
+    font-weight:600;
+}
+
+.agenda td{
+    border-bottom:1px solid #ddd;
+}
+
+.agenda tbody tr:nth-child(even){
+    background:#f8f8f8;
 }
 
 .agenda tbody tr:hover{
-
-    background:#C8E6C9;
-
+    background:#e8f5e9;
 }
 
 img{
@@ -949,7 +914,7 @@ img{
 
 .kontak-info article{
 
-    background:var(--white);
+    background:var(--card);
 
     padding:35px;
 
@@ -973,7 +938,7 @@ img{
 
 form{
 
-    background:var(--white);
+    background:var(--card);
 
     padding:40px;
 
@@ -1006,7 +971,11 @@ textarea{
 
     padding:14px 16px;
 
-    border:1px solid #ccc;
+    background:var(--card);
+
+    color:var(--text);
+
+    border:1px solid var(--border);
 
     border-radius:8px;
 
@@ -1358,8 +1327,16 @@ body.dark{
     color:#ffffff;
 }
 
+body.dark .menu{
+    background:#2b2b2b;
+}
+
 body.dark header,
 body.dark .navbar{
+    background:#2b2b2b;
+}
+
+body.dark header.scrolled{
     background:#2b2b2b;
 }
 
@@ -1401,3 +1378,31 @@ body.dark footer{
     background:#111;
 }
 
+body.dark section:nth-child(even){
+    background:#2b2b2b;
+}
+
+body.dark .informasi{
+    background:#4a4300;
+    color:#fff;
+}
+
+body.dark tbody tr:nth-child(even){
+    background:#3a3a3a;
+}
+
+body.dark tbody tr:hover{
+    background:#4a5d4a;
+}
+
+.hero{
+
+    position:relative;
+
+}
+
+.hero-text{
+
+    max-width:800px;
+
+}
