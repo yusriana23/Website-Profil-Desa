@@ -93,43 +93,48 @@ if(form){
 
     form.addEventListener("submit", function(e){
 
-        e.preventDefault();
+    e.preventDefault();
 
-        const nama = document.getElementById("nama").value.trim();
+    const nama = document.getElementById("nama").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const telepon = document.getElementById("telepon").value.trim();
+    const pesan = document.getElementById("pesan").value.trim();
 
-        const email = document.getElementById("email").value.trim();
+    if(nama.length < 3){
+        alert("Nama minimal 3 karakter.");
+        return;
+    }
 
-        const telepon = document.getElementById("telepon").value.trim();
+    if(pesan.length < 10){
+        alert("Pesan minimal 10 karakter.");
+        return;
+    }
 
-        const pesan = document.getElementById("pesan").value.trim();
+    // Ambil data lama
+    let dataKontak = JSON.parse(localStorage.getItem("kontak")) || [];
 
-        if(nama.length < 3){
-
-            alert("Nama minimal 3 karakter.");
-
-            return;
-
-        }
-
-        if(pesan.length < 10){
-
-            alert("Pesan minimal 10 karakter.");
-
-            return;
-
-        }
-
-        alert("Terima kasih! Pesan Anda berhasil dikirim.");
-
-        form.reset();
-
-        if(counter){
-
-            counter.textContent = "0 / 300 karakter";
-
-        }
-
+    // Tambahkan data baru
+    dataKontak.push({
+        nama: nama,
+        email: email,
+        telepon: telepon,
+        pesan: pesan,
+        tanggal: new Date().toLocaleString("id-ID")
     });
+
+    // Simpan kembali ke localStorage
+    localStorage.setItem("kontak", JSON.stringify(dataKontak));
+
+    alert("Terima Kasih! Pesan anda berhasil dikirim.");
+
+    form.reset();
+
+    if(counter){
+        counter.textContent = "0 / 300 karakter";
+    }
+
+});
+
 
 }
 
