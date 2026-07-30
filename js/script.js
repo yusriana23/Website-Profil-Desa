@@ -1,6 +1,8 @@
+//Mengambil elemen menu
 const menuButton = document.getElementById("menu-button");
 const menu = document.querySelector(".menu");
 
+//Membuka dan menutup menu
 if(menuButton){
 
     menuButton.addEventListener("click", function(){
@@ -11,11 +13,12 @@ if(menuButton){
 
 }
 
-
+// Menandai Halaman yg sedang dibuka
 const currentPage = window.location.pathname.split("/").pop();
-
 const menuLink = document.querySelectorAll(".menu a");
 
+
+//Melakukan Pengecekan menu untuk memberi warna atau garis penanda
 menuLink.forEach(link=>{
 
     if(link.getAttribute("href")===currentPage){
